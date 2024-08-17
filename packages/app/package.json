@@ -35,7 +35,8 @@
     "vite-plugin-singlefile": "^2.0.2"
   },
   "engines": {
-    "node": "20.9.0"
+    "node": "20.9.0",
+    "pnpm": "8.15.6"
   },
   "eslintConfig": {
     "extends": [
