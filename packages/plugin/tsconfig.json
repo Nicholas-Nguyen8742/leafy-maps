@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "rootDir": "src/plugin.ts",
+    "isolatedModules": false,
+    "outFile": "../../dist/plugin.js",
+    "composite": true,
+    "skipLibCheck": true,
+    "target": "ES6",
+    "lib": ["ES6", "dom"],
+    "module": "None",
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@figma"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "leafy-maps",
+  "version": "1.0.0",
+  "description": "Figma plugin repository to add customizable leaflet maps",
+  "main": "dist/plugin.js",
+  "types": "dist/plugin.d.ts",
+  "license": "ISC",
+  "author": {
+    "name": "Nicholas Nguyen",
+    "email": "NicholasNguyen8742@gmail.com",
+    "url": "https://github.com/Nicholas-Nguyen8742"
+  },
+  "scripts": {
+    "build": "pnpm run --stream -r build",
+    "build:app": "pnpm run --filter ./packages/app build",
+    "build:plugin": "pnpm run --filter ./packages/plugin build"
+  },
+  "engines": {
+    "node": "20.9.0",
+    "pnpm": "8.15.6"
+  },
+  "keywords": [
+    "pnpm",
+    "typescript",
+    "leaflet",
+    "vite",
+    "figma-plugin",
+    "figma"
+  ]
+}

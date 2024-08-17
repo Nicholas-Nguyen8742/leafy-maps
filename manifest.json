@@ -1,0 +1,20 @@
+{
+  "name": "LeafyMaps",
+  "id": "1406393727204881372",
+  "api": "1.0.0",
+  "main": "dist/plugin.js",
+  "ui": "dist/index.html",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "documentAccess": "dynamic-page",
+  "editorType": [
+    "figma"
+  ],
+  "networkAccess": {
+    "allowedDomains": [
+      "https://openstreetmap.org",
+      "https://tile.openstreetmap.org",
+      "https://*.tile.openstreetmap.org"
+    ]
+  }
+}
