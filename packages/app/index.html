@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaflet Map in Figma</title>
+    <script>
+      function handleLeafletClick(event) {
+        event.preventDefault();
+        var url = event.currentTarget.getAttribute("href");
+        parent.postMessage(
+          { pluginMessage: { type: "OPEN_IN_BROWSER", url: url } },
+          "*"
+        );
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
