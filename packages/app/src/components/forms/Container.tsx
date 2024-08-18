@@ -1,32 +1,42 @@
-import { useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import L from 'leaflet';
 import { BASEMAPS } from '../../utils/constants';
 
 export function FormContainer({ map }: { map?: L.Map }) {
-  const [basemapLayer, setBasemapLayer] = useState<L.TileLayer>(BASEMAPS[0].layer);
+  const [basemap, setBasemap] = useState(BASEMAPS[0]);
 
   useEffect(() => {
     if (!map) {
       return;
     }
 
-    basemapLayer.addTo(map);
+    basemap.layer.addTo(map);
     return () => {
-      basemapLayer.remove();
+      basemap.layer.remove();
     }
-  }, [map, basemapLayer]);
+  }, [map, basemap]);
+
+  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    const foundBasemap = BASEMAPS.find((b) => b.key === e.target.value);
+    if (foundBasemap) {
+      setBasemap(foundBasemap);
+    }
+  };
 
   return (
-    <div>
-      <label>Basemaps</label>
-      {BASEMAPS.map(({ key, label, layer }) => (
-        <button
-          id={key}
-          onClick={() => setBasemapLayer(layer)}
-        >
-          {label}
-        </button>
-      ))}
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <label htmlFor="basemaps">Basemaps</label>
+      <select id="basemaps" onChange={handleChange}>
+        {BASEMAPS.map(({ key, label }) => (
+          <option
+            id={key}
+            value={key}
+            selected={basemap.key === key}
+          >
+            {label}
+          </option>
+        ))}
+      </select>
     </div>
   );
 }
