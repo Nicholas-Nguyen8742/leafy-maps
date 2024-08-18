@@ -1,24 +1,17 @@
-import { useEffect } from 'react';
+import { useState } from 'react';
 import L from 'leaflet';
+import { Map, Marker } from './components';
 import 'leaflet/dist/leaflet.css';
 
 export function App() {
-  useEffect(() => {
-    const map = L.map('map').setView([51.505, -0.09], 13);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" onclick="handleLeafletClick(event)">OpenStreetMap</a> contributors' })
-      .addTo(map);
-
-    // Adding a basic marker
-    L.marker([51.505, -0.09])
-      .addTo(map)
-      .bindPopup('A marker')
-      .openPopup();
-  }, []);
+  const [leafletMap, setLeafletMap] = useState<L.Map | undefined>();
 
   return (
-    <div id="map" style={{ height: '100%', width: '100%' }} />
+    <Map onMapUpdate={setLeafletMap}>
+      {leafletMap && (
+        <Marker map={leafletMap} />
+      )}
+    </Map>
   );
 }
 
