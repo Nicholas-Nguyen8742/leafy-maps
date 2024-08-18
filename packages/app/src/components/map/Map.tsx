@@ -21,14 +21,6 @@ export function Map({ onMapUpdate, children } : { children?: ReactElement; onMap
     }
   }, []);
 
-  useEffect(() => {
-    if (leafletMap) {
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" onclick="handleLeafletClick(event)">OpenStreetMap</a> contributors' })
-        .addTo(leafletMap);
-    }
-  }, [leafletMap]);
-
   return (
     <div id="map" style={{ height: '100%', width: '100%' }}>
       {children}

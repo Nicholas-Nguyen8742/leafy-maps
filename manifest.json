@@ -14,7 +14,14 @@
     "allowedDomains": [
       "https://openstreetmap.org",
       "https://tile.openstreetmap.org",
-      "https://*.tile.openstreetmap.org"
+      "https://*.tile.openstreetmap.org",
+      "https://tile.openstreetmap.fr",
+      "https://*.tile.openstreetmap.fr",
+      "https://tile.opentopomap.org",
+      "https://*.tile.opentopomap.org",
+      "https://*.basemaps.cartocdn.com",
+      "https://tiles.stadiamaps.com",
+      "http://services.arcgisonline.com"
     ]
   }
 }
