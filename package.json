@@ -19,6 +19,7 @@
     "node": "20.9.0",
     "pnpm": "8.15.6"
   },
+  "packageManager": "pnpm@8.15.6",
   "keywords": [
     "pnpm",
     "typescript",
