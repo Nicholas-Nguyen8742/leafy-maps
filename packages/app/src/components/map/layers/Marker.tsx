@@ -12,17 +12,11 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 export function Marker({ map }: { map: L.Map; }) {
   useEffect(() => {
-    const marker = L.marker([51.505, -0.091])
-      .addTo(map)
-      .bindPopup(new L.Popup({
-        offset: new L.Point(12, 10),
-        content: 'This is a marker',
-      }));
-
-    console.log('marker: ', marker);
+    L.marker([29.749907,  -95.358421])
+      .addTo(map);
   }, [map]);
 
-  return <div />;
+  return null;
 }
 
 export default Marker;

@@ -1,18 +1,22 @@
-import { ReactElement, useEffect, useState } from 'react';
+import { ReactElement, useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-export function Map({ onMapUpdate, children } : { children?: ReactElement; onMapUpdate: (m: L.Map | undefined) => void}) {
-  const [leafletMap, setLeafletMap] = useState<L.Map | undefined>();
-
+export function Map({
+  map, onMapUpdate, children,
+} : {
+  map?: L.Map; children?: ReactElement; onMapUpdate: (m: L.Map | undefined) => void
+}) {
   const handleMapUpdate = (m: L.Map | undefined) => {
     onMapUpdate(m);
-    setLeafletMap(m);
   };
 
   useEffect(() => {
-    if (!leafletMap) {
-      const map = L.map('map').setView([51.505, -0.09], 13);
+    if (!map) {
+      const map = L.map('map', {
+        zoom: 10,
+        center: [29.7, -95.3]
+      });
 
       handleMapUpdate(map);
     }
