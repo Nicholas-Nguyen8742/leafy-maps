@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "lib": ["ES6", "dom"],
+    "lib": ["es2016", "dom"],
     "module": "NodeNext",
     "skipLibCheck": true,
     "sourceMap": true,
