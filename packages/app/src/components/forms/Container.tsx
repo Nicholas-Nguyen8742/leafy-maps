@@ -64,6 +64,12 @@ export function FormContainer({
     const { target: { name, value } } = e;
     if (['width', 'height'].includes(name) && value) {
       setDimensions((prev) => ({ ...prev, [name]: value }));
+
+      figmaMessenger({
+        type: 'INTERNAL_RESIZE_MAP',
+        width: dimensions.width,
+        height: dimensions.height,
+      });
     }
   }
 
