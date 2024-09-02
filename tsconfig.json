@@ -24,9 +24,6 @@
     "experimentalDecorators": true,
     "removeComments": true,
   },
-  "include": [
-    "packages/*",
-  ],
   "exclude": [
     "node_modules"
   ]
