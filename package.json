@@ -13,7 +13,10 @@
   "scripts": {
     "build": "pnpm run --stream -r build",
     "build:app": "pnpm run --filter ./packages/app build",
-    "build:plugin": "pnpm run --filter ./packages/plugin build"
+    "build:plugin": "pnpm run --filter ./packages/plugin build",
+    "dev": "pnpm run --stream -r dev",
+    "dev:app": "pnpm run --filter ./packages/app dev",
+    "dev:plugin": "pnpm run --filter ./packages/plugin dev"
   },
   "engines": {
     "node": "20.9.0",
