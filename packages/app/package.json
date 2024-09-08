@@ -2,18 +2,19 @@
   "name": "leafymaps-app",
   "version": "1.0.0",
   "description": "Figma plugin to create customizable leaflet components",
+  "main": "../../dist/index.html",
+  "license": "MIT",
+  "author": {
+    "name": "Nicholas Nguyen",
+    "email": "NicholasNguyen8742@gmail.com",
+    "url": "https://github.com/Nicholas-Nguyen8742"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json && vite build",
     "lint": "eslint --ext .ts,.tsx --ignore-pattern node_modules .",
     "lint:fix": "eslint --ext .ts,.tsx --ignore-pattern node_modules --fix .",
     "dev": "vite build --watch"
   },
-  "author": {
-    "name": "Nicholas Nguyen",
-    "email": "NicholasNguyen8742@gmail.com",
-    "url": "https://github.com/Nicholas-Nguyen8742"
-  },
-  "license": "",
   "dependencies": {
     "html2canvas": "^1.4.1",
     "leaflet": "^1.9.4",
@@ -35,9 +36,9 @@
     "vite": "^5.4.1",
     "vite-plugin-singlefile": "^2.0.2"
   },
+  "packageManager": "pnpm@8.15.6",
   "engines": {
-    "node": "20.9.0",
-    "pnpm": "8.15.6"
+    "node": "20.9.0"
   },
   "eslintConfig": {
     "extends": [

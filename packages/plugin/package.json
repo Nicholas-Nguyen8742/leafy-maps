@@ -4,18 +4,18 @@
   "description": "Figma plugin to create customizable leaflet components",
   "main": "../../dist/plugin.js",
   "types": "../../dist/plugin.d.ts",
+  "license": "MIT",
+  "author": {
+    "name": "Nicholas Nguyen",
+    "email": "NicholasNguyen8742@gmail.com",
+    "url": "https://github.com/Nicholas-Nguyen8742"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "lint": "eslint --ext .ts,.tsx --ignore-pattern node_modules .",
     "lint:fix": "eslint --ext .ts,.tsx --ignore-pattern node_modules --fix .",
     "dev": "npm run build --watch"
   },
-  "author": {
-    "name": "Nicholas Nguyen",
-    "email": "NicholasNguyen8742@gmail.com",
-    "url": "https://github.com/Nicholas-Nguyen8742"
-  },
-  "license": "",
   "devDependencies": {
     "@figma/eslint-plugin-figma-plugins": "*",
     "@figma/plugin-typings": "^1.98.0",
@@ -25,9 +25,9 @@
     "eslint": "^8.54.0",
     "typescript": "^5.3.2"
   },
+  "packageManager": "pnpm@8.15.6",
   "engines": {
-    "node": "20.9.0",
-    "pnpm": "8.15.6"
+    "node": "20.9.0"
   },
   "eslintConfig": {
     "extends": [

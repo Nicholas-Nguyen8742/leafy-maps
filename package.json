@@ -4,7 +4,7 @@
   "description": "Figma plugin repository to add customizable leaflet maps",
   "main": "dist/plugin.js",
   "types": "dist/plugin.d.ts",
-  "license": "ISC",
+  "license": "MIT",
   "author": {
     "name": "Nicholas Nguyen",
     "email": "NicholasNguyen8742@gmail.com",
@@ -18,11 +18,10 @@
     "dev:app": "pnpm run --filter ./packages/app dev",
     "dev:plugin": "pnpm run --filter ./packages/plugin dev"
   },
-  "engines": {
-    "node": "20.9.0",
-    "pnpm": "8.15.6"
-  },
   "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": "20.9.0"
+  },
   "keywords": [
     "pnpm",
     "typescript",
