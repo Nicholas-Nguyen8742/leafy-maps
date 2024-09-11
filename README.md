@@ -1,40 +1,29 @@
-Below are the steps to get your plugin running. You can also find instructions at:
+# LeafyMaps - Figma Plugin for Leaflet
 
-  https://www.figma.com/plugin-docs/plugin-quickstart-guide/
+## Quick Start
 
-This plugin template uses Typescript and NPM, two standard tools in creating JavaScript applications.
+1. Clone the LeafyMaps [repository](https://github.com/Nicholas-Nguyen8742/leafy-maps)
 
-First, download Node.js which comes with NPM. This will allow you to install TypeScript and other
-libraries. You can find the download link here:
+```bash
+git clone https://github.com/Nicholas-Nguyen8742/leafy-maps.git
+```
 
-  https://nodejs.org/en/download/
+```bash
+cd leafy-maps
+```
 
-Next, install TypeScript using the command:
+2. Install dependencies
 
-  npm install -g typescript
+```bash
+nvm install 20.9.0
+nvm use 20.9.0
 
-Finally, in the directory of your plugin, get the latest type definitions for the plugin API by running:
+pnpm install
 
-  npm install --save-dev @figma/plugin-typings
+pnpm dev
+```
+3. Run the plugin via the Figma Desktop App
 
-If you are familiar with JavaScript, TypeScript will look very familiar. In fact, valid JavaScript code
-is already valid Typescript code.
+![Demonstration of running your local figma plugin with the Figma Desktop App](./docs/assets/figma-installation.gif)
 
-TypeScript adds type annotations to variables. This allows code editors such as Visual Studio Code
-to provide information about the Figma API while you are writing code, as well as help catch bugs
-you previously didn't notice.
-
-For more information, visit https://www.typescriptlang.org/
-
-Using TypeScript requires a compiler to convert TypeScript (code.ts) into JavaScript (code.js)
-for the browser to run.
-
-We recommend writing TypeScript code using Visual Studio code:
-
-1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
-2. Open this directory in Visual Studio Code.
-3. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
-    then select "npm: watch". You will have to do this again every time
-    you reopen Visual Studio Code.
-
-That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
+> For more detailed intallation steps go to [docs/INSTALL.md](./docs/INSTALL.md)
