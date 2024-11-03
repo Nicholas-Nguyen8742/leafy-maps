@@ -5,10 +5,11 @@
   "main": "dist/plugin.js",
   "types": "dist/plugin.d.ts",
   "license": "MIT",
-  "author": {
-    "name": "Nicholas Nguyen",
-    "email": "NicholasNguyen8742@gmail.com",
-    "url": "https://github.com/Nicholas-Nguyen8742"
+  "author": "Nicholas Nguyen <NicholasNguyen8742@gmail.com> (https://github.com/Nicholas-Nguyen8742)",
+  "homepage": "https://github.com/Nicholas-Nguyen8742/leafy-maps#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicholas-Nguyen8742/leafy-maps"
   },
   "scripts": {
     "build": "pnpm run --stream -r build",
